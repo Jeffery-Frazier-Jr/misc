@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Gradient Background</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="background-container">
+    <div class="background-gradient"></div>
+    <img src="your-image.jpg" alt="Blurred Background" class="background-image" />
+  </div>
+
+  <div class="foreground-box">
+    <h2>Hello!</h2>
+    <p>This is a floating box.</p>
+  </div>
+
+  <div class="controls" id="settings-panel">
+    <label>
+      <input type="checkbox" id="use-gradient" checked>
+      Use gradient background
+    </label>
+  
+    <label>Blur: 
+      <input type="range" id="blur" min="0" max="30" value="15">
+      <span id="blur-value">15</span>px
+    </label>
+  
+    <label>Zoom:
+      <input type="range" id="zoom" min="1" max="2" step="0.01" value="1.5">
+      <span id="zoom-value">1.5</span>x
+    </label>
+  
+    <label>Sensitivity:
+      <input type="range" id="sensitivity" min="0" max="50" value="25">
+      <span id="sensitivity-value">25</span>px
+    </label>
+  
+    <label>Horizontal Scale:
+      <input type="range" id="x-scale" min="0" max="2" step="0.01" value="1">
+      <span id="x-scale-value">1.00</span>x
+    </label>
+  
+    <label>Vertical Scale:
+      <input type="range" id="y-scale" min="0" max="2" step="0.01" value="1">
+      <span id="y-scale-value">1.00</span>x
+    </label>
+  
+    <button id="open-cgl-menu">Edit Gradient Colors</button>
+  </div>
+  
+  <!-- Color Gradient Layer Menu -->
+  <div class="controls" id="cgl-panel" style="display: none;">
+    <div class="cgl-carousel">
+      <button id="cgl-prev">←</button>
+      <div id="cgl-page-container"></div>
+      <button id="cgl-next">→</button>
+    </div>
+    <button id="add-cgl">Add Color Layer</button>
+    <button id="back-to-settings">Back to Settings</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
